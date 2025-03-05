@@ -1,1 +1,1 @@
-Repo for algorithmic challanges and problems
+Repo for algorithmic challenges and problems
