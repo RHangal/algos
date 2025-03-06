@@ -51,8 +51,7 @@ struct Node* connect(struct Node* root) {
         int levelSize = rear - front;
         for (int i =0; i < levelSize; i++){
             struct Node* temp = queue[front++];
-            if(i == levelSize - 1) temp->next = NULL;
-            else temp->next = queue[front];
+            if(i != levelSize - 1) temp->next = queue[front];
              
             if(temp->left) queue[rear++] = temp->left;
             if(temp->right) queue[rear++] = temp->right;
