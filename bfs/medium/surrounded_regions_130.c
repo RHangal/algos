@@ -14,6 +14,47 @@ To capture a surrounded region, replace all 'O's with 'X's in-place within the o
  * We can use a struct for the coordinates
  */
 
+/*
+void bfs(char** board, int boardSize, int boardColSize, int row, int col) {
+    // Directions for moving up, down, left, right
+    int directions[4][2] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
+    // Queue for BFS
+    int queueSize = boardSize * boardColSize;
+    int queue[queueSize][2];
+    int front = 0, rear = 0;
+
+    // Start BFS from the given cell
+    queue[rear][0] = row;
+    queue[rear][1] = col;
+    rear++;
+    board[row][col] = '#'; // Mark as safe
+
+    while (front < rear) {
+        int curRow = queue[front][0];
+        int curCol = queue[front][1];
+        front++;
+
+        // Explore all four directions
+        for (int d = 0; d < 4; d++) {
+            int newRow = curRow + directions[d][0];
+            int newCol = curCol + directions[d][1];
+
+            if (newRow >= 0 && newRow < boardSize && newCol >= 0 && newCol < boardColSize && board[newRow][newCol] == 'O') {
+                board[newRow][newCol] = '#'; // Mark as safe
+                queue[rear][0] = newRow;
+                queue[rear][1] = newCol;
+                rear++;
+            }
+        }
+    }
+}
+
+
+
+*/
+
+
 typedef struct {
     int row;
     int col;
