@@ -67,7 +67,7 @@ int calculate(char* s){
             num = 0;
             operation = c;
         }
-        *s++;
+        s++;
     }
 
     int res = 0;
